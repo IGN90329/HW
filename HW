@@ -1,0 +1,38 @@
+#!/bin/bash
+
+echo "<----FIND YOUR ZODIAC SIGN---->"
+
+# Prompt the user to enter their birthday month
+read -p "Please ENTER your birthday month ---> " MONTH
+
+# Convert the input to lowercase to handle case insensitivity
+MONTH=$(echo "$MONTH" | tr '[:upper:]' '[:lower:]')
+
+# Check the entered month and print the corresponding zodiac sign
+if [ "$MONTH" == "january" ]; then
+  echo "You're a Capricorn or Aquarius"
+elif [ "$MONTH" == "february" ]; then
+  echo "You're an Aquarius or Pisces"
+elif [ "$MONTH" == "march" ]; then
+  echo "You're a Pisces or Aries"
+elif [ "$MONTH" == "april" ]; then
+  echo "You're an Aries or Taurus"
+elif [ "$MONTH" == "may" ]; then
+  echo "You're a Taurus or Gemini"
+elif [ "$MONTH" == "june" ]; then
+  echo "You're a Gemini or Cancer"
+elif [ "$MONTH" == "july" ]; then
+  echo "You're a Cancer or Leo"
+elif [ "$MONTH" == "august" ]; then
+  echo "You're a Leo or Virgo"
+elif [ "$MONTH" == "september" ]; then
+  echo "You're a Virgo or Libra"
+elif [ "$MONTH" == "october" ]; then
+  echo "You're a Libra or Scorpio"
+elif [ "$MONTH" == "november" ]; then
+  echo "You're a Scorpio or Sagittarius"
+elif [ "$MONTH" == "december" ]; then
+  echo "You're a Sagittarius or Capricorn"
+else
+  echo "Incorrect entry, please ENTER a valid birthday month"
+fi
